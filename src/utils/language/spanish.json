@@ -1,0 +1,8 @@
+{
+  "langding":{
+    "title":"inicio",
+    "signIn":"Inicia Sesion",
+    "placeholderUSER":"email",
+    "placeholderPASSWORD": "Password"
+  }
+}

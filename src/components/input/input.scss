@@ -1,0 +1,51 @@
+.containerInput {
+  height: 3.2rem;
+  display: flex;
+  flex: 1;
+  & .customInput {
+    border-radius: 4px;
+    padding: 1rem 1.2rem;
+    background-color: #f2f2f2;
+    border: 0.7px solid transparent;
+    width: 100%;
+    box-sizing: border-box;
+  
+
+    &--success {
+      border-color: #328b21;
+    }
+
+    &--error {
+      border-color: #c5061d;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #202228;
+     
+    }
+
+    &::placeholder {
+      color: #a5a5a5;
+    }
+
+    &__icon {
+      position: relative;
+      float: right;
+      top: -2.1rem;
+      right: 1rem;
+      z-index: 10;
+    }
+
+    &.large {
+      width: -webkit-fill-available;
+    }
+  }
+}
+
+.messageError {
+  position: relative;
+  top: 0.3rem;
+  font-size: 12px;
+  color: #c5061d;
+}
