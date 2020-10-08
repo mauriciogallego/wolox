@@ -1,0 +1,27 @@
+@import '../../assets/styles/common.scss';
+
+.button {
+  border-radius: 25%;
+  width: 10rem;
+  margin: 1%;
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font:{
+    family: 'Montserrat-SemiBold' ;
+    size: 1.5rem;
+  };
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -webkit-appearance: button; /* for input */
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &:hover {
+    border: 0.5;
+    background-color: $blue;
+  }
+}

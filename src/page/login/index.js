@@ -10,7 +10,7 @@ function Login({ language }) {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const languageText = translationText(language)["langding"];
+  const languageText = translationText(language);
 
   useEffect(() => {
     error && setError(false);
@@ -19,7 +19,7 @@ function Login({ language }) {
   return (
     <div>
       <div className="containerLogin">
-        <h2>{languageText["signIn"]}</h2>
+        <h2>{languageText["titleLogin"]}</h2>
         <form>
           <Input
             placeholder={languageText["placeholderUSER"]}

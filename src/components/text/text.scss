@@ -1,0 +1,28 @@
+@import "../../assets/styles/common.scss";
+
+.general {
+  height: min-content;
+}
+
+.gray {
+  color: $gray;
+}
+.white {
+  color: white;
+}
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.bold {
+  font-family: "Montserrat-Bold";
+}
+
+.containerText {
+  display: flex;
+  flex-wrap: wrap;
+}

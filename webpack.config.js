@@ -12,11 +12,33 @@ module.exports = {
   },
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist",
-    hot: true,
+    contentBase: "./public",
+    compress: true,
+    port: 3000,
   },
   module: {
     rules: [
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack", "url-loader"],
+      },
+      {
+        test: /\.scss$/,
+        loader: [
+          "style-loader",
+          "css-loader",
+          "resolve-url-loader",
+          "sass-loader",
+        ],
+      },
+      {
+        test:[ /\.(woff2?|ttf|otf|eot)$/, /\.(png|jpe?g|gif)$/i],
+        exclude: /node_modules/,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+        },
+      },
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
@@ -26,13 +48,6 @@ module.exports = {
             presets: ["@babel/react", "@babel/env"],
           },
         },
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          "css-loader", 
-          "sass-loader"
-        ],
       },
     ],
   },

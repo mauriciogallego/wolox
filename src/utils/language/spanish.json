@@ -1,8 +1,23 @@
 {
-  "langding":{
-    "title":"inicio",
-    "signIn":"Inicia Sesion",
-    "placeholderUSER":"email",
-    "placeholderPASSWORD": "Password"
-  }
+  "signIn":"Login",
+  "titleLogin": "Inicia Sesion",
+  "placeholderUSER":"email",
+  "placeholderPASSWORD": "Password",
+  "buttonHome":"Inicio",
+  "buttonBenefits":"Beneficios",
+  "posterLanding": "Bienvenido a tu [Entrevista] [Tecnica] en [Wolox]",
+  "twitterTitle": "[350] [+] [Woloxers]",
+  "@Wolox":"@wolox",
+  "follow": "Siguenos",
+  "textBox1": "Trabajamos para [convertir] [ideas] en productos.",
+  "textBenefits": "Entre los beneficios que ofrecemos se encuentran [;)]",
+  "textFooter": "Gracias por [completar] [el] [ejercicio]",
+  "subTextFooter": "Te invitamos a ver mas información",
+  "buttonFooter": "conocer más",
+  "benefitA": "Fleixibilidad Horaria",
+  "benefitB": "Home Office",
+  "benefitC" : "capaciotaciones y workshops",
+  "benefitD" : "snacks, frutas y bebidas gratis",
+  "benefitE" : "semana Remota",
+  "benefitF": "Trabajar en utimas tecnologias"
 }

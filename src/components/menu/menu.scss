@@ -1,0 +1,15 @@
+.logo {
+  width: 18.5rem;
+}
+.containerMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3%;
+
+  &-containerButton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

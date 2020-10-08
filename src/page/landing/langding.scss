@@ -1,0 +1,112 @@
+@import "../../assets/styles/common.scss";
+$bg-header: url("../../assets/Backgrounds/Bg_Header.png");
+$bg-footer: url("../../assets/Backgrounds/Bg_Footer.png");
+$bg-sectionA: url("../../assets/img_woloxer@3x.png");
+
+.containerLangding {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .header {
+    background: $bg-header;
+    background-size: contain;
+    margin: 3%;
+  }
+
+  .containerRow {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+  }
+  .img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 30%;
+    margin: auto;
+  }
+  .containerTextWelcome {
+    width: 40%;
+    margin: 3%;
+    .textWelcome {
+      font: {
+        size: 3.5rem;
+      }
+    }
+  }
+
+  .fiftyPorcent {
+    width: 50%;
+  }
+  .sectionA {
+    background: $bg-sectionA;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+
+    .twitterSectionA {
+      font-size: 2.5rem;
+      color: white;
+    }
+  }
+  .textSection {
+    font-size: 3.5rem;
+    font-family: "Montserrat-Bold";
+  }
+  .sectionB {
+    background: $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    padding: 0% 10% ;
+    .textSection{
+    font-family: "Montserrat-semibold";
+
+    }
+  }
+  .containerBenefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2.5rem;
+    .textBenefits {
+      text-align: center;
+      font-size: 2.5rem;
+      font-family: "Montserrat-SemiBold";
+    }
+  }
+
+  .listBenefits {
+    -webkit-box-shadow: 0px 23px 18px -14px rgba(120, 120, 120, 0.285);
+    -moz-box-shadow: 0px 23px 18px -14px rgba(120, 120, 120, 0.285);
+    box-shadow: 0px 23px 18px -14px rgba(120, 120, 120, 0.285);
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    background: $bg-footer;
+    background-size: contain;
+    .textFooter {
+      font-size: 4rem;
+      font-family: "Montserrat-SemiBold";
+    }
+
+    .subTextFooter {
+      font-size: 3rem;
+      font-family: "Montserrat-SemiBold";
+    }
+  }
+
+  .svg-footer {
+    margin: 5%;
+    width: 10rem;
+    align-self: center;
+    background: transparent;
+  }
+}
