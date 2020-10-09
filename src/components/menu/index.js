@@ -6,34 +6,34 @@ import { translationText } from "~/utils/language/index";
 import { Link } from "wouter";
 import "./menu.scss";
 import { Button } from "~/components/buttons/index";
-
+import useLocation from "wouter/use-location";
 
 function Menu({ language }) {
   const languageText = translationText(language);
+  const [location, setLocation] = useLocation();
   return (
     <div className="containerMenu">
       <div className="containerImg">
         <img className="logo" src={Logo} />
       </div>
       <div className="containerMenu-containerButton">
-        <Link>
-          <Button
-            title={languageText["buttonHome"]}
-            ClassName=""
-          />
-        </Link>
-        <Link>
-          <Button
-            title={languageText["buttonBenefits"]}
-            ClassName=""
-          />
-        </Link>
-        <Link>
-          <Button
-            title={languageText["signIn"]}
-            ClassName=""
-          />
-        </Link>
+        <Button
+          title={languageText["buttonHome"]}
+          ClassName=""
+          handleClick={() => {
+            setLocation("/");
+          }}
+        />
+        <Button
+          handleClick={() => {
+            setLocation("/list");
+          }}
+          title={languageText["buttonBenefits"]}
+          ClassName=""
+        />
+        <Button 
+          handleClick={()=>{setLocation('/login')}}
+          title={languageText["signIn"]} ClassName="" />
       </div>
     </div>
   );

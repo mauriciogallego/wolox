@@ -2,15 +2,14 @@
   height: 3.2rem;
   display: flex;
   flex: 1;
+  margin: 5%;
   & .customInput {
     border-radius: 4px;
     padding: 1rem 1.2rem;
     background-color: #f2f2f2;
     border: 0.7px solid transparent;
-    width: 100%;
     box-sizing: border-box;
   
-
     &--success {
       border-color: #328b21;
     }

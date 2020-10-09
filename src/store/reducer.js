@@ -1,11 +1,15 @@
-import { CHANGE_LANGUAGE } from "~/utils/constants";
+import { CHANGE_LANGUAGE, LOGIN } from "~/utils/constants";
 
 const initialState = {
-  user:{},
-  auth:{
-    token: null
+  user: {},
+  auth: {
+    token: null,
   },
-  language : 'spanish'
+  language: "spanish",
+  error: {
+    show: false,
+    message: "",
+  },
 };
 
 export default function todos(state = initialState, { type, payload }) {
@@ -13,6 +17,16 @@ export default function todos(state = initialState, { type, payload }) {
     case CHANGE_LANGUAGE:
       return {
         ...state,
+        language: payload.language,
+      };
+    case LOGIN:
+      return {
+        ...state,
+        user: payload.user,
+        auth: {
+          ...state.auth,
+          token: payload.auth.token,
+        },
       };
     default:
       return state;

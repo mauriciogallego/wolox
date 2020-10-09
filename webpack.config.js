@@ -3,9 +3,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpack = require("webpack");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: ["@babel/polyfill", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundle-[hash].js",
@@ -14,6 +15,7 @@ module.exports = {
   devServer: {
     contentBase: "./public",
     compress: true,
+    historyApiFallback: true,
     port: 3000,
   },
   module: {
@@ -32,7 +34,7 @@ module.exports = {
         ],
       },
       {
-        test:[ /\.(woff2?|ttf|otf|eot)$/, /\.(png|jpe?g|gif)$/i],
+        test: [/\.(woff2?|ttf|otf|eot)$/, /\.(png|jpe?g|gif)$/i],
         exclude: /node_modules/,
         loader: "file-loader",
         options: {
@@ -57,5 +59,6 @@ module.exports = {
     }),
     new CleanWebpackPlugin(["./public"]),
     new webpack.HotModuleReplacementPlugin(),
+    new Dotenv()
   ],
 };

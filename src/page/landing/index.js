@@ -6,7 +6,7 @@ import { Button } from "~/components/buttons/index";
 import CardIcon from "~/components/cardIcon/index";
 import { listBenefits } from "./listBenefits";
 import Menu from "~/components/menu/index";
-import "./langding.scss";
+import "./landing.scss";
 import img from "~/assets/Img Hero/Ic_ilustra_Hero@3x.png";
 import woloxFooter from "~/assets/Ic_Wolox_Footer.svg";
 import Text from "~/components/text/index";

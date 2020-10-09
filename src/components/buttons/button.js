@@ -1,17 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import './button.scss'
-function Button({title, ClassName}) {
+import React from "react";
+import PropTypes from "prop-types";
+import "./button.scss";
+
+function Button({ title, ClassName, handleClick }) {
   return (
-    <button className={`button ${ClassName}`}>
+    <button onClick={handleClick} className={`button ${ClassName}`}>
       {title}
     </button>
-  )
+  );
 }
 
 Button.propTypes = {
+  title: PropTypes.string,
+  ClassName: PropTypes.string,
+};
 
-}
-
-export default Button
-
+export default Button;

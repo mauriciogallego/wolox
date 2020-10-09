@@ -1,31 +1,28 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import './input.scss'
 import { inputTypes } from './inputTypes'
 
 function Input({
   placeholder,
-  size,
   inputType,
-  maxLength,
-  minLength,
   value,
   handleOnChange,
+  checked,
   isRequired,
   withError,
   messageError,
 }) {
   return (
-    <>
+    <Fragment>
       <div className="containerInput">
         <input
-          className={`customInput ${size} ${withError ? 'customInput--error' : ''}`}
-          maxLength={maxLength}
-          minLength={minLength}
+          className={`customInput  ${withError ? 'customInput--error' : ''}`}
           placeholder={placeholder}
           title={placeholder}
           type={inputType}
           value={value}
+          checked={checked}
           onChange={(e) => handleOnChange(e.target.value)}
           required={isRequired}
         />
@@ -39,7 +36,7 @@ function Input({
         )} */}
       </div>
 {/*       {withError && messageError && <span className="messageError">{messageError}</span>} */}
-    </>
+    </Fragment>
   )
 }
 

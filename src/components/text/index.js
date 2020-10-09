@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import "./text.scss";
-function Text({ paragraph, ClassName, orderColors = [] }) {
+function Text({ paragraph="", ClassName = "", orderColors = [] }) {
   let count = -1;
   const vectorText = paragraph.split(" ");
   const reg = /\[(.*?)\]/;
@@ -11,7 +11,10 @@ function Text({ paragraph, ClassName, orderColors = [] }) {
       count += 1;
       return (
         <Fragment>
-          <p key={index} className={`general ${ClassName} ${orderColors[count]}`}>
+          <p
+            key={index}
+            className={`general ${ClassName} ${orderColors[count]}`}
+          >
             {i.replace("[", "").replace("]", "")}&nbsp;
           </p>
         </Fragment>
