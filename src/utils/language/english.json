@@ -1,5 +1,26 @@
 {
-  "langding":{
-    "title":"home"
-  }
+  "signIn":"Login",
+  "titleLogin": "Sign In",
+  "placeholderUSER":"email",
+  "placeholderPASSWORD": "Password",
+  "buttonHome":"Home",
+  "buttonBenefits":"Benefits",
+  "posterLanding": "Welcome to your [Interview] [Technique] in [Wolox]",
+  "twitterTitle": "[350] [+] [Woloxers]",
+  "@Wolox":"@wolox",
+  "follow": "Follow us",
+  "textBox1": "We work to [turn] [ideas] into products. ",
+  "textBenefits": "Among the benefits we offer are [;)]",
+  "textFooter": "Thank you for [completing] [the] [exercise]",
+  "subTextFooter": "We invite you to see more information",
+  "buttonFooter": "learn more",
+  "benefitA": "Flexible schedule",
+  "benefitB": "Home Office",
+  "benefitC" : "trainings and workshops",
+  "benefitD" : "free snacks, fruits and drinks",
+  "benefitE" : "remote week",
+  "benefitF": "Work on the latest technologies",
+  "remember": "Remember user  .",
+  "access": "Come in",
+  "logout": "Salir"
 }

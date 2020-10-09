@@ -1,0 +1,22 @@
+.containerFooterPrincipal {
+  width: 10rem;
+  margin: 5%;
+  align-self: center;
+  .svg-footer {
+    background: transparent;
+  }
+  .changeLanguage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      padding: 4%;
+      cursor: pointer;
+      &:hover {
+        font-family: "Montserrat-Bold";
+      }
+    }
+  }
+}

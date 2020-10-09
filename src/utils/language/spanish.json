@@ -14,10 +14,13 @@
   "textFooter": "Gracias por [completar] [el] [ejercicio]",
   "subTextFooter": "Te invitamos a ver mas información",
   "buttonFooter": "conocer más",
-  "benefitA": "Fleixibilidad Horaria",
+  "benefitA": "Flexibilidad Horaria",
   "benefitB": "Home Office",
   "benefitC" : "capaciotaciones y workshops",
   "benefitD" : "snacks, frutas y bebidas gratis",
   "benefitE" : "semana Remota",
-  "benefitF": "Trabajar en utimas tecnologias"
+  "benefitF": "Trabajar en utimas tecnologias",
+  "remember": "Recordar usuario.",
+  "access": "Entrar",
+  "logout": "Salir"
 }

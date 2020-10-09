@@ -11,7 +11,6 @@ import Text from "~/components/text/index";
 import { Button } from "~/components/buttons/index";
 import * as httpClient from "~/Api/index";
 import { LOGIN } from "~/utils/constants";
-import {} from "wouter";
 import useLocation from "wouter/use-location";
 
 function Login({ language, authRedux }) {
@@ -31,7 +30,10 @@ function Login({ language, authRedux }) {
     const res = await httpClient.post("/login", {
       data: { email: login, password },
     });
-    authRedux({ auth: { token: res.token }, user: login });
+    authRedux({
+      auth: { token: res.token },
+      user: { email: login, remember: check },
+    });
     setLocation("/list");
   };
   return (
@@ -64,14 +66,14 @@ function Login({ language, authRedux }) {
             <div className="checkbox">
               <Input
                 inputType={inputTypes.CHECKBOX}
-                handleOnChange={setCheck}
+                handleOnChange={()=>setCheck(!check)}
                 cheked={check}
                 isRequired={false}
                 withError={error}
               />
-              <p>Recordar usuario</p>
+              <p>{languageText["remember"]}</p>
             </div>
-            <Button handleClick={auth} title="Entrar" />
+            <Button handleClick={auth} title={languageText["access"]} />
           </form>
         </div>
       </div>
@@ -88,7 +90,6 @@ const mapDispatchToProp = (dispatch) => {
 };
 
 const mapToStateToProps = (state) => {
-  console.log("state", state);
   return state;
 };
 

@@ -62,10 +62,9 @@ $bg-sectionA: url("../../assets/img_woloxer@3x.png");
     align-items: center;
     justify-content: center;
     height: 30rem;
-    padding: 0% 10% ;
-    .textSection{
-    font-family: "Montserrat-semibold";
-
+    padding: 0% 10%;
+    .textSection {
+      font-family: "Montserrat-semibold";
     }
   }
   .containerBenefits {
@@ -101,12 +100,5 @@ $bg-sectionA: url("../../assets/img_woloxer@3x.png");
       font-size: 3rem;
       font-family: "Montserrat-SemiBold";
     }
-  }
-
-  .svg-footer {
-    margin: 5%;
-    width: 10rem;
-    align-self: center;
-    background: transparent;
   }
 }

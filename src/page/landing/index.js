@@ -8,7 +8,6 @@ import { listBenefits } from "./listBenefits";
 import Menu from "~/components/menu/index";
 import "./landing.scss";
 import img from "~/assets/Img Hero/Ic_ilustra_Hero@3x.png";
-import woloxFooter from "~/assets/Ic_Wolox_Footer.svg";
 import Text from "~/components/text/index";
 
 function Landing({ language }) {
@@ -80,7 +79,6 @@ function Landing({ language }) {
         />
         <Button title={languageText["buttonFooter"]} />
       </div>
-      <img className="svg-footer" src={woloxFooter} alt="footer" />
     </div>
   );
 }

@@ -9,7 +9,6 @@ const NavigationObserver = ({ children, state }) => {
   children.map(({ props }) => {
     if (props.path === location) {
       if (props.isPrivate && !auth.token) setLocation("/login");
-      if (!props.isPrivate && auth.token) setLocation("/list");
     }
   });
   return <>{children}</>;
