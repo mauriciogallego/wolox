@@ -13,6 +13,7 @@ function Button({ title, ClassName, handleClick }) {
 Button.propTypes = {
   title: PropTypes.string,
   ClassName: PropTypes.string,
+  handleClick: PropTypes.func,
 };
 
 export default Button;

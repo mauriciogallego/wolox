@@ -9,9 +9,11 @@ import Menu from "~/components/menu/index";
 import "./landing.scss";
 import img from "~/assets/Img Hero/Ic_ilustra_Hero@3x.png";
 import Text from "~/components/text/index";
+import useLocation from "wouter/use-location";
 
 function Landing({ language }) {
   const languageText = translationText(language);
+  const [localtion, setLocation] = useLocation();
   return (
     <div className="containerLangding">
       <div className="header">
@@ -41,7 +43,9 @@ function Landing({ language }) {
               ClassName="twitterSectionA"
             />
           </div>
-          <Button title={languageText["follow"]} />
+          <a target="_blank" href="https://twitter.com/Wolox">
+            <Button title={languageText["follow"]} ClassName="buttonSectionA" />
+          </a>
         </div>
         <div className="sectionB fiftyPorcent">
           <Text
@@ -51,7 +55,7 @@ function Landing({ language }) {
           />
         </div>
       </div>
-      <div className='containerBenefits'>
+      <div className="containerBenefits">
         <Text
           ClassName="textBenefits"
           orderColors={["blue"]}
@@ -77,7 +81,12 @@ function Landing({ language }) {
           paragraph={languageText["subTextFooter"]}
           ClassName="subTextFooter"
         />
-        <Button title={languageText["buttonFooter"]} />
+        <a target="_blank" href="https://www.wolox.com.ar/">
+          <Button
+            ClassName="buttonFooter"
+            title={languageText["buttonFooter"]}
+          />
+        </a>
       </div>
     </div>
   );

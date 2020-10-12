@@ -17,10 +17,10 @@ function Menu({ language, auth, authRedux}) {
       <div className="containerImg">
         <img className="logo" src={Logo} />
       </div>
-      <div className="containerMenu-containerButton">
+      <div className="containerButton">
         <Button
           title={languageText["buttonHome"]}
-          ClassName=""
+          ClassName="buttonClasic"
           handleClick={() => {
             setLocation("/");
           }}
@@ -30,7 +30,7 @@ function Menu({ language, auth, authRedux}) {
             setLocation("/list");
           }}
           title={languageText["buttonBenefits"]}
-          ClassName=""
+          ClassName="buttonClasic"
         />
 
         {auth.token ? (
@@ -40,7 +40,7 @@ function Menu({ language, auth, authRedux}) {
               setLocation("/");
             }}
             title={languageText["logout"]}
-            ClassName=""
+            ClassName="button3"
           />
         ) : (
           <Button
@@ -48,7 +48,7 @@ function Menu({ language, auth, authRedux}) {
               setLocation("/login");
             }}
             title={languageText["signIn"]}
-            ClassName=""
+            ClassName="button3"
           />
         )}
       </div>
