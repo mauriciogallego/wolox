@@ -37,7 +37,7 @@ $bg-sectionA: url("../../assets/img_woloxer@3x.png");
     width: 50%;
   }
   .sectionA {
-    // background: $bg-sectionA;
+    background: $bg-sectionA;
     position: relative;
     z-index: 2;
     background-size: contain;
@@ -53,7 +53,7 @@ $bg-sectionA: url("../../assets/img_woloxer@3x.png");
       color: white;
     }
 
-    a{
+    a {
       position: relative;
       overflow: hidden;
       border-radius: 28px;
@@ -61,12 +61,12 @@ $bg-sectionA: url("../../assets/img_woloxer@3x.png");
         color: white;
         border-color: $blue;
 
-        &:hover:after{
+        &:hover::after {
           transform: translate(0);
         }
 
-        &:after{
-          content: '';
+        &:after {
+          content: "";
           position: absolute;
           left: 0;
           bottom: 0;
@@ -74,10 +74,9 @@ $bg-sectionA: url("../../assets/img_woloxer@3x.png");
           height: 100%;
           background: $blue;
           z-index: -1;
-          transform: translate(0,100%);
-          transition: all .25s ease;
+          transform: translate(0, 100%);
+          transition: all 0.25s ease;
         }
-
       }
     }
   }
@@ -130,17 +129,17 @@ $bg-sectionA: url("../../assets/img_woloxer@3x.png");
       font-family: "Montserrat-SemiBold";
     }
 
-    .buttonFooter{
+    .buttonFooter {
       margin-top: 25%;
       background: $blue;
       color: white;
       overflow: hidden;
-      box-shadow: 0px 6px 15px 0px rgba(0,0,0,.1);
-      &:hover{
-        transform: translate(0,-5px);
-        box-shadow: 0px 6px 15px 0px rgba(0,0,0,.49);
+      box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.1);
+      &:hover {
+        transform: translate(0, -5px);
+        box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.49);
       }
-      &:hover:after{
+      &:hover:after {
         transform: translate(0);
       }
     }

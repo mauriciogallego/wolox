@@ -7,7 +7,7 @@ const initialState = {
     remeber: false,
   },
   auth: {
-    token: null,
+    token: "",
   },
   language: "spanish",
   error: {
@@ -43,8 +43,8 @@ export default function todos(state = initialState, { type, payload }) {
         },
       };
     case LOGOUT:
-      localStorage.setItem("email", null);
-      localStorage.setItem("token", null);
+      localStorage.setItem("email", '');
+      localStorage.setItem("token", '');
       return {
         ...initialState,
         language: state.language,
@@ -62,7 +62,7 @@ export default function todos(state = initialState, { type, payload }) {
         },
         auth: {
           ...state.auth,
-          token,
+          token: token ? token : "",
         },
       };
   }

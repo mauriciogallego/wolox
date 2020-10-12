@@ -9,20 +9,46 @@
   flex-direction: row;
   justify-content: space-between;
 
-  .containerButton{
+  .containerButton {
     width: 100%;
     display: flex;
     justify-content: flex-end;
   }
 
-  .buttonClasic{
+  .buttonClasic {
     color: rgba(0, 0, 0, 0.507);
-    &:hover{
+    &:hover {
       color: black;
     }
   }
-  .button3{
-    border-color: $blue;
-    color: $blue;
+  .containerButton3 {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    .button3 {
+      border-color: $blue;
+      color: $blue;
+
+      &:hover {
+        color: white;
+      }
+      &:hover::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0.1);
+        z-index: -1;
+        opacity: 0;
+        background: $blue;
+        transition: all 0.25s ease;
+      }
+    }
   }
 }

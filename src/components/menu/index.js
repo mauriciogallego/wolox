@@ -8,10 +8,10 @@ import "./menu.scss";
 import { Button } from "~/components/buttons/index";
 import useLocation from "wouter/use-location";
 
-function Menu({ language, auth, authRedux}) {
+function Menu({ language, auth, authRedux }) {
   const languageText = translationText(language);
   const [location, setLocation] = useLocation();
-
+  console.log(auth.token)
   return (
     <div className="containerMenu">
       <div className="containerImg">
@@ -32,25 +32,26 @@ function Menu({ language, auth, authRedux}) {
           title={languageText["buttonBenefits"]}
           ClassName="buttonClasic"
         />
-
-        {auth.token ? (
-          <Button
-            handleClick={() => {
-              authRedux();
-              setLocation("/");
-            }}
-            title={languageText["logout"]}
-            ClassName="button3"
-          />
-        ) : (
-          <Button
-            handleClick={() => {
-              setLocation("/login");
-            }}
-            title={languageText["signIn"]}
-            ClassName="button3"
-          />
-        )}
+        <div className="containerButton3">
+          {auth.token !== '' ? (
+            <Button
+              handleClick={() => {
+                authRedux();
+                setLocation("/");
+              }}
+              title={languageText["logout"]}
+              ClassName="button3"
+            />
+          ) : (
+            <Button
+              handleClick={() => {
+                setLocation("/login");
+              }}
+              title={languageText["signIn"]}
+              ClassName="button3"
+            />
+          )}
+        </div>
       </div>
     </div>
   );
