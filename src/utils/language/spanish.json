@@ -25,5 +25,12 @@
   "logout": "Salir",
   "asd":"Ascendente",
   "des": "Descendente",
-  "titleFilter": "Opciones de [Filtro]"
+  "titleFilter": "Opciones de [Filtro]",
+  "searchTech": "Escriba aqui la tecnologia",
+  "language":"lenguaje",
+  "type": "tipo",
+  "year": "año",
+  "license": "licencia",
+  "author": "autor",
+  "sumTechs": "Suma total: "
 }

@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import Text from "~/components/text/index";
 import "./listOfTechs.scss";
+import { translationText } from "~/utils/language/index";
 
-function ListOfTechs({ techs, optionsFilter }) {
+function ListOfTechs({ techs, optionsFilter, language }) {
+  const languageText = translationText(language);
   var applyFilter = [];
+  let count = 0;
   useEffect(() => {
     techs.sort(optionsFilter.order == true ? asd : des);
   }, [optionsFilter]);
@@ -19,24 +23,35 @@ function ListOfTechs({ techs, optionsFilter }) {
     return name.startsWith(optionsFilter.search);
   });
 
+  count = applyFilter.length;
   return (
-    <div className="listTechs">
-      {applyFilter.map((i) => {
-        return (
-          <div className="cardTech">
-            <img src={i.logo} alt={i.tech} />
-            <div className="textCard">
-              <p className="titleTech">{i.tech}</p>
-              <p>{`Language: ${i.language}`}</p>
-              <p>{`type: ${i.type}`}</p>
-              <p>{`year: ${i.year}`}</p>
-              <p>{`license: ${i.license}`}</p>
-              <p>{`author: ${i.author}`}</p>
+    <Fragment>
+      <div className="listTechs">
+        {applyFilter.map((i) => {
+          return (
+            <div className="cardTech">
+              <img src={i.logo} alt={i.tech} />
+              <div className="textCard">
+                <p className="titleTech">{i.tech}</p>
+                <p>{`${languageText["language"]}: ${i.language}`}</p>
+                <p>{`${languageText["type"]}: ${i.type}`}</p>
+                <p>{`${languageText["year"]}: ${i.year}`}</p>
+                <p>{`${languageText["license"]}: ${i.license}`}</p>
+                <p>{`${languageText["author"]}: ${i.author}`}</p>
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+      <div className="sumTechs">
+        <Text
+          orderColors={["bold"]}
+          ClassName=""
+          paragraph={languageText["sumTechs"]}
+        />
+        <p>{count}</p>
+      </div>
+    </Fragment>
   );
 }
 

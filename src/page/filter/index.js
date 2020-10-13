@@ -55,6 +55,7 @@ function Filter({ language }) {
       </div>
       <div className="optionToFilter">
         <Input
+        placeholder={languageText["searchTech"]}
           inputType={inputTypes.USER}
           value={search}
           handleOnChange={setSearch}
@@ -84,6 +85,7 @@ function Filter({ language }) {
 
       <ListOfTechs
         techs={techs}
+        language={language}
         optionsFilter={{ search, option: option.selected, order }}
       />
     </div>
