@@ -1,0 +1,22 @@
+@import "../../assets/styles/common.scss";
+
+.container{
+  .containerTitleFilter{
+    margin: 3%;
+    .titleFilter{
+      font-size: 3rem;
+    }
+  }
+  .optionToFilter{
+    display: flex;
+    flex-direction: row;
+  }
+  select{
+  }
+  .filterChecked{
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+    align-items: center;
+  }
+}

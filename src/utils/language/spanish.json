@@ -22,5 +22,8 @@
   "benefitF": "Trabajar en utimas tecnologias",
   "remember": "Recordar usuario.",
   "access": "Entrar",
-  "logout": "Salir"
+  "logout": "Salir",
+  "asd":"Ascendente",
+  "des": "Descendente",
+  "titleFilter": "Opciones de [Filtro]"
 }

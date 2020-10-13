@@ -1,0 +1,31 @@
+.listTechs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .cardTech {
+    margin: 2%;
+    padding: 2%;
+    width: 40%;
+    display: flex;
+    border-radius: 25px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.34);
+
+    img {
+      width: 200px;
+      height: 150px;
+      margin: 1%;
+      object-fit: contain;
+    }
+    .textCard {
+      margin-left: 3%;
+      .titleTech {
+        font-size: 3rem;
+        font-family: "Montserrat-Bold";
+      }
+    }
+  }
+}

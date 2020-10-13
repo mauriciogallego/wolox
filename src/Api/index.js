@@ -5,7 +5,6 @@ let headers = {
   Accept: `application/json`,
 };
 const { REACT_APP_APIHOST } = process.env;
-console.log(REACT_APP_APIHOST)
 const fetch = async (url, options = {}) => {
   try {
     const instance = axios.create({
@@ -17,11 +16,11 @@ const fetch = async (url, options = {}) => {
 
     instance.interceptors.response.use(
       (response) => {
-        console.log(response);
+        // console.log(response);
         return response;
       },
       (error) => {
-        console.log(error);
+        console.log("error", error);
         return Promise.reject(error);
       }
     );

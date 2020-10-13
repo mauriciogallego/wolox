@@ -11,7 +11,6 @@ import useLocation from "wouter/use-location";
 function Menu({ language, auth, authRedux }) {
   const languageText = translationText(language);
   const [location, setLocation] = useLocation();
-  console.log(auth.token)
   return (
     <div className="containerMenu">
       <div className="containerImg">

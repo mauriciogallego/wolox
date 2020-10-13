@@ -36,6 +36,16 @@ function Login({ language, authRedux }) {
     });
     setLocation("/list");
   };
+
+  const handleUser = (e) => {
+    setLogin(e);
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (emailRegex.test(e)){
+      setError(true);
+    } else {
+      setError(false);
+    }
+  };
   return (
     <div className="container">
       <Menu />
@@ -53,7 +63,7 @@ function Login({ language, authRedux }) {
               placeholder={languageText["placeholderUSER"]}
               inputType={inputTypes.USER}
               value={login}
-              handleOnChange={setLogin}
+              handleOnChange={handleUser}
               withError={error}
             />
             <Input
@@ -61,12 +71,11 @@ function Login({ language, authRedux }) {
               inputType={inputTypes.PASSWORD}
               value={password}
               handleOnChange={setPassword}
-              withError={error}
             />
             <div className="checkbox">
               <Input
                 inputType={inputTypes.CHECKBOX}
-                handleOnChange={()=>setCheck(!check)}
+                handleOnChange={() => setCheck(!check)}
                 cheked={check}
                 isRequired={false}
                 withError={error}

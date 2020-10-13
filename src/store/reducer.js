@@ -25,7 +25,7 @@ export default function todos(state = initialState, { type, payload }) {
         language: payload.language,
       };
     case LOGIN:
-      console.log("entro", payload.user.remember);
+      // console.log("entro", payload.user.remember);
       if (payload.user.remember) {
         localStorage.setItem("email", payload.user.email);
         localStorage.setItem("token", payload.auth.token);
