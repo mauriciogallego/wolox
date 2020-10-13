@@ -18,6 +18,7 @@ function Landing({ language }) {
     <div className="containerLangding">
       <div className="header">
         <Menu />
+        <div className="br" />
         <div className="containerRow">
           <div className="containerTextWelcome">
             <Text

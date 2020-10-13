@@ -5,7 +5,7 @@
   "placeholderPASSWORD": "Password",
   "buttonHome":"Inicio",
   "buttonBenefits":"Beneficios",
-  "posterLanding": "Bienvenido a tu [Entrevista] [Tecnica] en [Wolox]",
+  "posterLanding": "Bienvenido a tu\n [Entrevista] [Tecnica] en\n [Wolox]",
   "twitterTitle": "[350] [+] [Woloxers]",
   "@Wolox":"@wolox",
   "follow": "Siguenos",
@@ -32,5 +32,7 @@
   "year": "año",
   "license": "licencia",
   "author": "autor",
-  "sumTechs": "Suma total: "
+  "sumTechs": "Suma total: ",
+  "labelInput1": "[tecnologia:] ",
+  "labelInput2": "[tipo:] "
 }

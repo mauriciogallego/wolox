@@ -4,9 +4,9 @@ import "./input.scss";
 import { inputTypes } from "./inputTypes";
 
 // npm install --save-dev @iconify/react @iconify/icons-bx
-import { Icon, InlineIcon } from '@iconify/react';
-import bxsCheckCircle from '@iconify/icons-bx/bxs-check-circle';
-import bxsXCircle from '@iconify/icons-bx/bxs-x-circle';
+import { Icon, InlineIcon } from "@iconify/react";
+import bxsCheckCircle from "@iconify/icons-bx/bxs-check-circle";
+import bxsXCircle from "@iconify/icons-bx/bxs-x-circle";
 
 function Input({
   placeholder,
@@ -16,11 +16,12 @@ function Input({
   checked,
   isRequired,
   withError,
+  useError,
 }) {
   return (
     <div className="icon-input">
       <input
-        className={` ${withError ? "valid" : "invalid"}`}
+        className={` ${useError ? (withError ? "valid" : "invalid") : null}`}
         placeholder={placeholder}
         type={inputType}
         value={value}
@@ -28,10 +29,12 @@ function Input({
         onChange={(e) => handleOnChange(e.target.value)}
         required={isRequired}
       />
-      <div className="icons">
-        <Icon icon={bxsCheckCircle} className="check" />
-        <Icon icon={bxsXCircle} className="x" />
-      </div>
+      {inputType !== inputTypes.FILTER ? (
+        <div className="icons">
+          <Icon icon={bxsCheckCircle} className="check" />
+          <Icon icon={bxsXCircle} className="x" />
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -42,20 +45,15 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   handleOnChange: PropTypes.func.isRequired,
   isRequired: PropTypes.bool,
-  withError: PropTypes.bool,
-  messageError: PropTypes.string,
-  size: PropTypes.string,
+  useError: PropTypes.bool,
 };
 
 Input.defaultProps = {
   placeholder: "",
-  inputType: inputTypes.TEXT,
-  maxLength: "120",
-  minLength: "2",
+  inputType: inputTypes.FILTER,
   isRequired: true,
   withError: false,
-  size: "",
-  messageError: "",
+  useError: false,
 };
 
 export default Input;

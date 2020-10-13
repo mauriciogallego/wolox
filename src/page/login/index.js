@@ -59,6 +59,7 @@ function Login({ language, authRedux }) {
               ClassName="textTitle"
               paragraph={languageText["titleLogin"]}
             />
+            <div className="br" />
             <Input
               placeholder={languageText["placeholderUSER"]}
               inputType={inputTypes.USER}
@@ -66,12 +67,14 @@ function Login({ language, authRedux }) {
               handleOnChange={handleUser}
               withError={error}
             />
+            <div className="br" />
             <Input
               placeholder={languageText["placeholderPASSWORD"]}
               inputType={inputTypes.PASSWORD}
               value={password}
               handleOnChange={setPassword}
             />
+            <div className="br" />
             <div className="checkbox">
               <Input
                 inputType={inputTypes.CHECKBOX}
@@ -82,6 +85,7 @@ function Login({ language, authRedux }) {
               />
               <p>{languageText["remember"]}</p>
             </div>
+            <div className="br" />
             <Button handleClick={auth} title={languageText["access"]} />
           </form>
         </div>

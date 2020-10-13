@@ -34,7 +34,6 @@ function Filter({ language }) {
     };
     data();
   }, []);
-  console.log("options", option);
 
   function changeSelect(e) {
     setOption({ ...option, selected: e.target.value });
@@ -54,13 +53,23 @@ function Filter({ language }) {
         />
       </div>
       <div className="optionToFilter">
+        <Text
+          orderColors={["bold"]}
+          ClassName="labelText"
+          paragraph={languageText["labelInput1"]}
+        />
         <Input
-        placeholder={languageText["searchTech"]}
-          inputType={inputTypes.USER}
+          placeholder={languageText["searchTech"]}
+          inputType={inputTypes.FILTER}
           value={search}
           handleOnChange={setSearch}
         />
-        <select onChange={changeSelect} value={option.selected}>
+        <Text
+          orderColors={["bold"]}
+          ClassName="labelText"
+          paragraph={languageText["labelInput2"]}
+        />
+        <select className="" onChange={changeSelect} value={option.selected}>
           {option.options.map((i) => {
             return <option value={i}>{i}</option>;
           })}
