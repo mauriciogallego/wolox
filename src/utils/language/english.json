@@ -22,5 +22,17 @@
   "benefitF": "Work on the latest technologies",
   "remember": "Remember user  .",
   "access": "Come in",
-  "logout": "Salir"
+  "logout": "Salir",
+  "asd":"Upward",
+  "des": "Falling",
+  "titleFilter": "[Filter] options",
+  "searchTech": "Write here the technology",
+  "language":"language",
+  "type": "type",
+  "year": "year",
+  "license": "license",
+  "author": "author",
+  "sumTechs": "Total amount: ",
+  "labelInput1": "[technology:] ",
+  "labelInput2": "[type:]"
 }

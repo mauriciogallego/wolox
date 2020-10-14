@@ -9,7 +9,6 @@ import Menu from "~/components/menu/index";
 import "./landing.scss";
 import img from "~/assets/Img Hero/Ic_ilustra_Hero@3x.png";
 import Text from "~/components/text/index";
-import useLocation from "wouter/use-location";
 
 import { Icon } from "@iconify/react";
 import bxlTwitter from '@iconify/icons-bx/bxl-twitter';
