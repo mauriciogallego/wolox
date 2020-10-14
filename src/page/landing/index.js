@@ -11,9 +11,11 @@ import img from "~/assets/Img Hero/Ic_ilustra_Hero@3x.png";
 import Text from "~/components/text/index";
 import useLocation from "wouter/use-location";
 
+import { Icon } from "@iconify/react";
+import bxlTwitter from '@iconify/icons-bx/bxl-twitter';
+
 function Landing({ language }) {
   const languageText = translationText(language);
-  const [localtion, setLocation] = useLocation();
   return (
     <div className="containerLangding">
       <div className="header">
@@ -37,8 +39,8 @@ function Landing({ language }) {
             ClassName="textSection"
             orderColors={["blue", "green", "green"]}
           />
-          <div>
-            <icon />
+          <div className="containerTwitterText">
+            <Icon icon={bxlTwitter} className="iconTwitter" />
             <Text
               paragraph={languageText["@Wolox"]}
               ClassName="twitterSectionA"
@@ -64,7 +66,7 @@ function Landing({ language }) {
         />
       </div>
 
-      <div className="containerRow listBenefits">
+      <div className="listBenefits">
         {listBenefits.map((i, index) => {
           return (
             <CardIcon key={index} text={languageText[i.text]} icon={i.icon} />
@@ -77,8 +79,8 @@ function Landing({ language }) {
           paragraph={languageText["textFooter"]}
           ClassName="textFooter"
         />
+        <div className="br" />
         <Text
-          orderColors={[]}
           paragraph={languageText["subTextFooter"]}
           ClassName="subTextFooter"
         />

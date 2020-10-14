@@ -2,9 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import "./input.scss";
 import { inputTypes } from "./inputTypes";
-
-// npm install --save-dev @iconify/react @iconify/icons-bx
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import bxsCheckCircle from "@iconify/icons-bx/bxs-check-circle";
 import bxsXCircle from "@iconify/icons-bx/bxs-x-circle";
 
@@ -18,10 +16,10 @@ function Input({
   withError,
   useError,
 }) {
+  useError ? console.log("withError",placeholder, withError) : null;
   return (
     <div className="icon-input">
       <input
-        className={` ${useError ? (withError ? "valid" : "invalid") : null}`}
         placeholder={placeholder}
         type={inputType}
         value={value}
@@ -29,10 +27,13 @@ function Input({
         onChange={(e) => handleOnChange(e.target.value)}
         required={isRequired}
       />
-      {inputType !== inputTypes.FILTER ? (
+      {useError ? (
         <div className="icons">
-          <Icon icon={bxsCheckCircle} className="check" />
-          <Icon icon={bxsXCircle} className="x" />
+          {withError ? (
+            <Icon icon={bxsXCircle} className="x" />
+          ) : (
+            <Icon icon={bxsCheckCircle} className="check" />
+          )}
         </div>
       ) : null}
     </div>

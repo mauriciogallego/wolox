@@ -7,6 +7,7 @@
     margin: 2%;
     padding: 2%;
     width: 40%;
+    min-width: 540px;
     display: flex;
     border-radius: 25px;
     background: white;
@@ -23,13 +24,32 @@
     .textCard {
       margin-left: 3%;
       .titleTech {
-        font-size: 3rem;
+        margin: 5% 0;
+        font-size: 2.2rem;
         font-family: "Montserrat-Bold";
       }
     }
   }
 }
 
-.sumTechs{
+.sumTechs {
   display: flex;
+}
+
+@media (max-width: 900px) {
+  .listTechs {
+    .cardTech {
+    min-width: 230px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      .textCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+    }
+  }
 }

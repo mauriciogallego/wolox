@@ -21,12 +21,9 @@ function Login({ language, authRedux }) {
   const languageText = translationText(language);
   const [location, setLocation] = useLocation();
 
-  useEffect(() => {
-    error && setError(false);
-  }, [login, password]);
-
   const auth = async (e) => {
     e.preventDefault();
+    if (error) return
     const res = await httpClient.post("/login", {
       data: { email: login, password },
     });
@@ -38,23 +35,26 @@ function Login({ language, authRedux }) {
   };
 
   const handleUser = (e) => {
-    setLogin(e);
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (emailRegex.test(e)){
-      setError(true);
-    } else {
+    console.log("e", e);
+    if (emailRegex.test(e)) {
       setError(false);
+    } else {
+      setError(true);
     }
+    setLogin(e);
   };
+
+  console.log('check', check)
   return (
     <div className="container">
       <Menu />
       <div className="containerLogin">
-        <div className="containerImg">
+        <div className="containerImgLogin">
           <img src={img} />
         </div>
         <div className="form">
-          <form className="login">
+          <form onSubmit={auth} className="login">
             <Text
               ClassName="textTitle"
               paragraph={languageText["titleLogin"]}
@@ -66,6 +66,7 @@ function Login({ language, authRedux }) {
               value={login}
               handleOnChange={handleUser}
               withError={error}
+              useError={login == "" ? false : true}
             />
             <div className="br" />
             <Input
@@ -86,7 +87,7 @@ function Login({ language, authRedux }) {
               <p>{languageText["remember"]}</p>
             </div>
             <div className="br" />
-            <Button handleClick={auth} title={languageText["access"]} />
+            <Button title={languageText["access"]} />
           </form>
         </div>
       </div>

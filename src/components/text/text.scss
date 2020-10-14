@@ -26,4 +26,15 @@
 .containerText {
   display: flex;
   flex-wrap: wrap;
+  
+}
+
+@media (max-width: 900px) {
+  .containerText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+    
 }

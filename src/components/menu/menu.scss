@@ -7,7 +7,7 @@
 .containerMenu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   .containerButton {
     width: 100%;
@@ -25,6 +25,9 @@
     position: relative;
     border-radius: 28px;
     overflow: hidden;
+    width: min-content;
+    align-items: center;
+    justify-content: center;
     .button3 {
       border-color: $blue;
       color: $blue;
@@ -50,5 +53,31 @@
         transition: all 0.25s ease;
       }
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .logo {
+    cursor: pointer;
+  }
+  .containerMenu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .containerButton {
+      height: min-content;
+      flex-direction: column;
+      align-items: center;
+    }
+    .burger {
+      transform: translate(0%);
+      transition: all 0.25s ease;
+    }
+    .burgerHide{
+      transform: translate(0%, -200%);
+      transition: all 0.25s ease;
+      height: 40px;
+    }
+
   }
 }

@@ -1,9 +1,7 @@
-%i{
+%i {
   position: absolute;
   transition: all 0.25s ease;
   font-size: 1.3rem;
-  opacity: 0;
-  visibility: hidden;
   transform: scale(0.5);
 }
 
@@ -48,15 +46,5 @@
       text-shadow: 0 5px 10px rgb(240, 90, 92);
     }
   }
-
-  .valid ~ .check {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-  }
-  .invalid ~ .x {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-  }
 }
+

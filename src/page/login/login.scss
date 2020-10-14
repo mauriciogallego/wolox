@@ -12,7 +12,7 @@ $bg: url("../../assets/Backgrounds/Bg_Header.png");
     display: flex;
     flex-direction: row;
     padding: 5%;
-    .containerImg {
+    .containerImgLogin {
       width: 60%;
     }
     .form {
@@ -22,25 +22,40 @@ $bg: url("../../assets/Backgrounds/Bg_Header.png");
       align-items: center;
       .login {
         width: 60%;
+        min-width: 300px;
         border-radius: 5%;
         padding: 5%;
         display: flex;
         flex-direction: column;
         align-items: center;
         background: white;
-        -webkit-box-shadow: 0px 0px 50px -18px rgba(0,0,0,0.34);
-        -moz-box-shadow: 0px 0px 50px -18px rgba(0,0,0,0.34);
-        box-shadow: 0px 0px 50px -18px rgba(0,0,0,0.34);
+        -webkit-box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.34);
+        -moz-box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.34);
+        box-shadow: 0px 0px 50px -18px rgba(0, 0, 0, 0.34);
         .textTitle {
-          font-size: 2rem;
+          font-size: 2em;
           font-family: "Montserrat-Bold";
         }
-        .checkbox{
+        .checkbox {
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: center;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    .containerLogin {
+      margin: 10% 0;
+      .containerImgLogin {
+        display: none;
+      }
+      .form {
+        width: 100%;
       }
     }
   }

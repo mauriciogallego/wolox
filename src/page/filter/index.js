@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { translationText } from "~/utils/language/index";
 import Menu from "~/components/menu/index";
 import { connect } from "react-redux";
@@ -42,6 +41,7 @@ function Filter({ language }) {
   const handleCheck = () => {
     setOrder(!order);
   };
+
   return (
     <div className="container">
       <Menu />
@@ -53,42 +53,48 @@ function Filter({ language }) {
         />
       </div>
       <div className="optionToFilter">
-        <Text
-          orderColors={["bold"]}
-          ClassName="labelText"
-          paragraph={languageText["labelInput1"]}
-        />
-        <Input
-          placeholder={languageText["searchTech"]}
-          inputType={inputTypes.FILTER}
-          value={search}
-          handleOnChange={setSearch}
-        />
-        <Text
-          orderColors={["bold"]}
-          ClassName="labelText"
-          paragraph={languageText["labelInput2"]}
-        />
-        <select className="" onChange={changeSelect} value={option.selected}>
-          {option.options.map((i) => {
-            return <option value={i}>{i}</option>;
-          })}
-        </select>
-        <div className="filterChecked">
-          <Input
-            inputType={inputTypes.CHECKBOX}
-            checked={!order}
-            handleOnChange={handleCheck}
+        <div className="rowButton">
+          <Text
+            orderColors={["bold"]}
+            ClassName="labelText"
+            paragraph={languageText["labelInput1"]}
           />
-          <p>{languageText["asd"]}</p>
+          <Input
+            placeholder={languageText["searchTech"]}
+            inputType={inputTypes.FILTER}
+            value={search}
+            handleOnChange={setSearch}
+          />
         </div>
-        <div className="filterChecked">
-          <Input
-            inputType={inputTypes.CHECKBOX}
-            checked={order}
-            handleOnChange={handleCheck}
+        <div className="rowButton">
+          <Text
+            orderColors={["bold"]}
+            ClassName="labelText"
+            paragraph={languageText["labelInput2"]}
           />
-          <p>{languageText["des"]}</p>
+          <select className="" onChange={changeSelect} value={option.selected}>
+            {option.options.map((i) => {
+              return <option value={i}>{i}</option>;
+            })}
+          </select>
+        </div>
+        <div className="rowButton">
+          <div className="filterChecked">
+            <Input
+              inputType={inputTypes.CHECKBOX}
+              checked={!order}
+              handleOnChange={handleCheck}
+            />
+            <p>{languageText["asd"]}</p>
+          </div>
+          <div className="filterChecked">
+            <Input
+              inputType={inputTypes.CHECKBOX}
+              checked={order}
+              handleOnChange={handleCheck}
+            />
+            <p>{languageText["des"]}</p>
+          </div>
         </div>
       </div>
 

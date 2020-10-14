@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import Logo from "~/assets/logo_full_color.svg";
 import { connect } from "react-redux";
@@ -11,12 +11,15 @@ import useLocation from "wouter/use-location";
 function Menu({ language, auth, authRedux }) {
   const languageText = translationText(language);
   const [location, setLocation] = useLocation();
+  const [burger, setBurger] = useState(false);
+  const ref = useRef();
+  const focusMenu = () => setBurger(!burger);
   return (
     <div className="containerMenu">
-      <div className="containerImg">
+      <div onClick={focusMenu} className="containerImg">
         <img className="logo" src={Logo} />
       </div>
-      <div className="containerButton">
+      <div ref={ref} className={`containerButton ${burger ? "burger" : "burgerHide"}`}>
         <Button
           title={languageText["buttonHome"]}
           ClassName="buttonClasic"
@@ -32,7 +35,7 @@ function Menu({ language, auth, authRedux }) {
           ClassName="buttonClasic"
         />
         <div className="containerButton3">
-          {auth.token !== '' ? (
+          {auth.token !== "" ? (
             <Button
               handleClick={() => {
                 authRedux();

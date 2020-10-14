@@ -11,6 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 
   p{
     margin: 0;

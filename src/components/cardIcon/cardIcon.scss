@@ -1,16 +1,14 @@
 .Card {
-  margin: 1%;
-  width: 20%;
+  width: 13em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   .img-svg{
     margin: auto;
   }
   .text {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.35em;
     height: 5rem;
     margin-top: 15%;
   }
